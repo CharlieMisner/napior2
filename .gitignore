@@ -2,6 +2,7 @@
 
 # compiled output
 /dist
+/static
 /tmp
 /out-tsc
 /target
@@ -21,7 +22,7 @@ speed-measure-plugin.json
 *.launch
 .settings/
 *.sublime-workspace
-.workspace.xml
+.workspace
 
 # IDE - VSCode
 .vscode/*
