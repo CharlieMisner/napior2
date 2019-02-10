@@ -98,20 +98,33 @@
 
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-          </execution>
-        </executions>
+        <version>3.1.0</version>
         <configuration>
+          <finalName>${project.version}</finalName>
+          <formats>
+            <format>tar.gz</format>
+          </formats>
           <descriptorRefs>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
+            <descriptorRef>project</descriptorRef>
           </descriptorRefs>
+          <tarLongFileMode>posix</tarLongFileMode>
         </configuration>
       </plugin>
+
+      <!-- <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <finalName>${project.version}</finalName>
+          <formats>
+            <format>tar.gz</format>
+          </formats>
+          <descriptorRefs>
+            <descriptorRef>project</descriptorRef>
+          </descriptorRefs>
+          <tarLongFileMode>posix</tarLongFileMode>
+        </configuration>
+      </plugin> -->
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
