@@ -4,7 +4,15 @@
 /dist
 /tmp
 /out-tsc
-/target
+/target/archive-tmp
+/target/classes
+/target/dependency
+/target/generated-sources
+/target/maven-archiver
+/target/maven-status
+/target/heroku
+mvn-dependency-list.log
+*.jar.original
 
 # dependencies
 /node_modules
