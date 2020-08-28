@@ -1,5 +1,7 @@
 package napior.calculations;
 
+import org.apache.commons.math3.linear.RealMatrix;
+
 public class Beam {
 
     private String beamType;
@@ -64,7 +66,5 @@ public class Beam {
         return beamMomentOfInertia;
     }
 
-    public String getStiffnessMatrix() {
-        return stiffnessMatrix.toString();
-    }
+    public RealMatrix getStiffnessMatrix() { return stiffnessMatrix.getGlobalElementStiffnessMatrix(); }
 }

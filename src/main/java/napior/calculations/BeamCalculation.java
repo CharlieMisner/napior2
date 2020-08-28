@@ -1,20 +1,23 @@
 package napior.calculations;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class BeamCalculation {
 
-    private static final int NODE_DEGREES_OF_FREEDOM = 3;
-    private static final int BEAM_DEGREES_OF_FREEDOM = 6;
+    public static final int NODE_DEGREES_OF_FREEDOM = 3;
+    public static final int BEAM_DEGREES_OF_FREEDOM = 6;
 
     private BeamInput[] beamInputs;
     private ArrayList<Beam> beams;
     private Node[] nodeInputs;
+    private ArrayList<Node> nodes;
 
     public BeamCalculation(BeamCalculationRequestBody calculationInputs) {
         this.beamInputs = calculationInputs.getBeamInputs();
         this.nodeInputs = calculationInputs.getNodeInputs();
         this.beams = instantiateBeams(beamInputs);
+        this.nodes = new ArrayList<>(Arrays.asList(nodeInputs));
     }
 
     /**

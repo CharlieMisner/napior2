@@ -86,4 +86,8 @@ public class ElementStiffnessMatrix {
     public String toString(){
         return this.globalElementStiffnessMatrix.toString();
     }
+
+  public RealMatrix getGlobalElementStiffnessMatrix() {
+    return globalElementStiffnessMatrix;
+  }
 }
